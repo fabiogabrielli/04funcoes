@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicitar dados do usuário
+        var precoProduto = parseFloat(prompt("Qual o valor do produto?"));
+        var frete = parseFloat(prompt("Qual o valor do frete?"));
+        var desconto = parseFloat(prompt("Qual o valor do desconto?"));
+
+        // Definição das funções usando a sintaxe de função tradicional
+        function somar(a, b, c) {
+            return a + b + c;
+        }
+
+        function subtrair(a, b) {
+            return a - b;
+        }
+
+        function calcularICMS(x) {
+            return x * 0.21;
+        }
+
+        // Cálculos
+        var icms = calcularICMS(precoProduto);
+        var soma = somar(precoProduto, icms, frete);
+        var novoPreco = subtrair(soma, desconto);
+
+        // Exibir o resultado
+        alert(novoPreco);
+    </script>
+</body>
+</html>
